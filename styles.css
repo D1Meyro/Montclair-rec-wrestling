@@ -12,7 +12,6 @@ body.page{background:var(--paper)}
 .content-section h2{margin-bottom:15px}
 .two-column{display:grid;grid-template-columns:1fr 1fr;gap:55px}
 .info-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
-.schedule-cards{grid-template-columns:repeat(2,minmax(0,1fr));max-width:900px;margin-top:0}
 .info-card{background:#fff;border-top:3px solid var(--blue);padding:28px}
 .info-card h2,.info-card h3{margin-top:0}
 .info-card p{color:var(--muted)}
@@ -27,5 +26,5 @@ body.page{background:var(--paper)}
 .contact-panel{background:var(--blue);color:#fff;padding:45px;max-width:850px}
 .contact-panel .eyebrow{color:#c4d3ff}.contact-panel a:not(.button){color:#fff}
 .back-link{display:inline-block;margin-bottom:28px;font-size:13px;font-weight:700;text-decoration:none;color:var(--blue)}
-@media(max-width:800px){.info-cards,.schedule-cards{grid-template-columns:1fr}.page-gallery{grid-template-columns:repeat(2,1fr)}.two-column,.coach-list{grid-template-columns:1fr}.page-hero{padding-top:50px}.page-gallery img{height:220px}}
+@media(max-width:800px){.info-cards{grid-template-columns:1fr}.page-gallery{grid-template-columns:repeat(2,1fr)}.two-column,.coach-list{grid-template-columns:1fr}.page-hero{padding-top:50px}.page-gallery img{height:220px}}
 @media(max-width:500px){.page-gallery{grid-template-columns:1fr}.page-gallery img{height:280px}.contact-panel{padding:30px 22px}}
