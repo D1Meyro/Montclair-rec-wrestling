@@ -1,14 +1,15 @@
-const composer = document.querySelector('#composer');
-const message = composer.querySelector('textarea');
-const toggle = document.querySelector('.sidebar-toggle');
-const sidebar = document.querySelector('#sidebar');
-
-composer.addEventListener('submit', event => {
-  event.preventDefault();
-  message.focus();
-});
-
-toggle.addEventListener('click', () => {
-  const open = sidebar.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-});
+const dialog = document.querySelector('#photo-dialog');
+if (dialog && typeof dialog.showModal === 'function') {
+  const image = dialog.querySelector('img');
+  document.querySelectorAll('[data-photo]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      image.src = link.href;
+      image.alt = link.querySelector('img').alt;
+      dialog.querySelector('p').textContent = image.alt;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+}
